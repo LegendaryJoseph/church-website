@@ -1,12 +1,65 @@
-/* Global Styles */
+/* 1. Define Light Mode (Default) */
 :root {
-    --primary-color: #1a2a6c; /* Deep Trustworthy Blue */
-    --accent-color: #fdbb2d;  /* Warm Gold */
-    --text-dark: #333;
-    --text-light: #ffffff;
-    --bg-light: #f4f4f4;
+    --bg-color: #ffffff;
+    --text-color: #1a202c;
+    --card-bg: #ffffff;
+    --card-border: #e5e7eb;
+    --section-bg: #f9fafb;
+    --primary-color: #1a2a6c;
 }
 
+/* 2. Define Dark Mode Colors */
+[data-theme="dark"] {
+    --bg-color: #0f172a;      /* Deep navy/black */
+    --text-color: #f1f5f9;    /* Off-white text */
+    --card-bg: #1e293b;       /* Slightly lighter navy for cards */
+    --card-border: #334155;
+    --section-bg: #0b1120;
+}
+
+/* 3. Apply the variables to your elements */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-card, .info-card, .glass-card {
+    background-color: var(--card-bg) !important;
+    border-color: var(--card-border) !important;
+    color: var(--text-color);
+}
+
+/* Styling the button itself */
+.mode-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Global Styles */
+:root {
+    /* Fixed Colors (Stay the same in both modes) */
+    --primary-color: #1a2a6c; 
+    --accent-color: #fdbb2d;
+    
+    /* Shifting Colors (Default Light Mode) */
+    --bg-color: #ffffff;
+    --text-color: #1a202c;
+    --card-bg: #ffffff;
+    --card-border: #e5e7eb;
+    --section-bg: #f9fafb;
+}
 * {
     margin: 0;
     padding: 0;
@@ -388,13 +441,13 @@ nav {
 .service-card-modern {
     background: #ffffff;
     border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 32px;
+    border-radius: 8px;
+    padding: 15px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
 .card-header {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
@@ -468,4 +521,967 @@ nav {
     .serif-title {
         font-size: 2rem;
     }
+}
+
+/* Leadership Section Styles */
+.leadership-section {
+    padding: 80px 0;
+    background-color: #f9fafb; /* Light bg to make white cards pop */
+}
+
+.text-center-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.department-group {
+    margin-bottom: 60px;
+}
+
+.dept-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #9ca3af; /* Muted foreground */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+/* Staff Grid */
+.staff-grid {
+    display: grid;
+    /* This creates 3 columns on large screens, 2 on tablets, 1 on mobile */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;
+    align-items: start; /* Prevents cards from stretching vertically to match neighbors */
+}
+
+/* Important: This prevents a single card from stretching across the whole row */
+.staff-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%; /* Occupies 100% of the GRID CELL, not the whole row */
+    max-width: 400px; /* Limits the size if the grid cell gets too big */
+    min-height: 200px; /* Ensures all cards have a similar baseline height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-elevate:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.staff-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    text-align: left; /* Keep it left-aligned */
+}
+
+.avatar-circle {
+    width: 64px;
+    height: 64px;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.avatar-circle span {
+    font-weight: 600;
+    color: #6b7280;
+    font-size: 1.25rem;
+}
+
+.staff-meta h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.staff-title {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.staff-email {
+    font-size: 0.875rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.staff-email:hover {
+    text-decoration: underline;
+}
+
+.staff-bio {
+    margin-top: 16px;
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Tablet view: 2 columns */
+@media screen and (max-width: 992px) {
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile view: 1 column */
+@media screen and (max-width: 600px) {
+    .staff-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 80px 0; /* Slightly more padding for a "premium" feel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-header-content {
+    text-align: center; /* Centers the text lines */
+    max-width: 800px;   /* Prevents the subtitle from stretching too wide */
+    margin: 0 auto;     /* Centers the block itself */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the flex items (H1 and P) */
+}
+
+.contact-header-content h1 {
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.contact-header-content p {
+    margin: 0 auto; /* Ensures the paragraph stays centered if it has a max-width */
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    padding: 60px 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.info-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 24px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    text-align: left;
+}
+
+.icon-circle-small {
+    width: 40px;
+    height: 40px;
+    background: rgba(26, 42, 108, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.text-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 992px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+}
+
+.volunteer-hero {
+    background-color: var(--primary-color, #1a2a6c); /* Ensure this is your deep blue/church color */
+    padding: 80px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* Forces all text inside to be white */
+}
+
+.volunteer-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; /* Centers inline elements like text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers block elements like the icon-wrapper */
+}
+
+/* Centering the Heart */
+.icon-wrapper {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-wrapper i {
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.8); /* White heart with slight transparency */
+}
+
+/* Ensuring the Title Renders */
+.volunteer-title {
+    font-family: 'serif', Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Large and responsive */
+    font-weight: 700;
+    color: #ffffff !important; /* Forces visibility */
+    margin-bottom: 20px;
+    line-height: 1.2;
+    display: block !important; /* Ensures it isn't hidden */
+}
+
+.volunteer-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-icon {
+    font-size: 3rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+
+/* Opportunities Grid */
+.opp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.opp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.opp-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.card-header-flex {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.badge {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.badge.secondary { background: #f3f4f6; color: #374151; }
+.badge.outline { border: 1px solid #e5e7eb; color: #6b7280; }
+
+.opp-details {
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: #6b7280;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.testimonial-section {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.testimonial-card {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers everything horizontally */
+    text-align: center;  /* Centers the text lines */
+}
+
+.testimonial-header {
+    margin-bottom: 32px;
+}
+
+.testimonial-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.quote-text {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Footer & Icon Centering */
+.testimonial-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.volunteer-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    color: #111827;
+}
+
+.volunteer-role {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin: 4px 0 0 0;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+}
+
+/* This ensures the section itself has space at the bottom */
+.events-section {
+    background-color: #f9fafb;
+    padding-top: 80px;      /* Equal to py-20 */
+    padding-bottom: 100px;   /* Extra space at the bottom */
+    width: 100%;
+    border-bottom: 1px solid #e5e7eb; /* Optional: subtle line to separate sections */
+}
+
+/* This ensures the container inside doesn't hit the bottom edge */
+.events-section .container {
+    margin-bottom: 40px; 
+}
+
+/* Utility class if you prefer using the HTML class names */
+.py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/* The Grid System: 4 columns on desktop, 1 on mobile */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    justify-content: center; /* Centers the whole grid */
+}
+
+/* The Event Card */
+.event-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures all cards in a row have same height */
+    text-align: left; /* Text inside card is left-aligned for readability */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-badge {
+    background: #f3f4f6;
+    color: #374151;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.event-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.event-desc {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pushes the meta-info to the bottom */
+}
+
+/* Icons & Meta Data */
+.event-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 15px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+.meta-item i {
+    width: 16px;
+    color: var(--primary-color); /* Your church blue */
+}
+
+/* --- Ministries Grid --- */
+.ministry-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding-bottom: 40px; /* Space before the next section */
+}
+
+.ministry-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.ministry-icon-circle {
+    width: 64px;
+    height: 64px;
+    background-color: rgba(var(--primary-rgb), 0.1); /* Primary color with 10% opacity */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.ministry-icon-circle i {
+    font-size: 28px;
+    color: var(--primary-color);
+}
+
+.ministry-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.ministry-card p {
+    font-size: 0.95rem;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* --- CTA Section --- */
+.cta-section {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.white-text {
+    color: #ffffff !important;
+}
+
+.cta-subtitle {
+    font-size: 1.15rem;
+    opacity: 0.9;
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Button Variants */
+.btn-secondary {
+    background-color: #ffffff;
+    color: var(--primary-color);
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #f3f4f6;
+}
+
+.btn-outline-white {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: border 0.2s;
+}
+
+.btn-outline-white:hover {
+    border-color: #ffffff;
+}
+
+/* Responsive Video Player */
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-aspect-ratio {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+}
+
+.video-aspect-ratio iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.stream-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.info-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+/* Layout Grid */
+.stream-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .stream-layout-grid {
+        grid-template-columns: 2fr 1fr; /* 2/3 for video, 1/3 for sidebar */
+    }
+}
+
+/* Live Badge & Pulse Animation */
+.badge-live {
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: pulse 2s infinite;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #dc2626;
+    border-radius: 50%;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Card Styling */
+.info-card, .sidebar-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8ch;
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.card-content {
+    padding: 10px 15px;
+}
+
+/* Form Styling */
+.sidebar-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+textarea.form-input {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Schedule List */
+.schedule-list {
+    list-style: none;
+    padding: 0;
+}
+
+.schedule-list li {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.small-note {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-top: 15px;
+}
+
+.status-badges {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fb-live-link {
+    color: #1877F2; /* Facebook Blue */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.2s;
+}
+
+.fb-live-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Sidebar Social Buttons */
+.social-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-social {
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+
+.btn-social.fb { background-color: #1877F2; }
+.btn-social.yt { background-color: #FF0000; }
+
+.btn-social:hover {
+    filter: brightness(0.9);
+}
+
+.small-text {
+    font-size: 0.85rem;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+/* Page Layout */
+.livestream-page {
+    background-color: #fcfcfd; /* Very light grey to let white cards pop */
+}
+
+.py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.stream-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+@media (min-width: 1024px) {
+    .stream-layout-grid {
+        grid-template-columns: 1.8fr 1fr;
+    }
+}
+
+/* Video Section */
+.video-section {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-footer-prompt {
+    background: #f8fafc;
+    padding: 12px 20px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.video-footer-prompt a {
+    color: #1877F2;
+    font-weight: 700;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+/* Sermon Card Styling */
+.sermon-details-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+}
+
+.category-tag {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.sermon-title {
+    font-size: 2.2rem;
+    margin: 10px 0 20px;
+}
+
+.divider {
+    height: 1px;
+    background: #f1f5f9;
+    margin: 25px 0;
+}
+
+/* Sidebar "Glass" Cards */
+.glass-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card-header-icon {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card-header-icon i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Inputs */
+.modern-input {
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.modern-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn-full {
+    width: 100%;
+    background: var(--primary-color, #1a2a6c);
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Schedule Rows */
+.s-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f8fafc;
+    font-size: 0.95rem;
+}
+
+.stream-header {
+    display: flex;
+    flex-direction: column; /* Stacks the title and status bar vertically */
+    align-items: center;    /* Centers them horizontally */
+    text-align: center;     /* Ensures text alignment is centered */
+    width: 100%;            /* Spans the full width of the column */
+    margin-bottom: 15px;    /* Keeps your mb-8 spacing */
+    padding-top: 0;      /* Removes any extra padding */
+    padding-bottom: 0;   /* Removes any extra padding */
 }

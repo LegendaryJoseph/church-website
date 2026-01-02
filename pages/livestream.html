@@ -12,6 +12,7 @@
 <body>
 
     <header>
+    
         <nav class="container">
             <div class="logo"> GLORIOUS <span> JOY <span> CHURCH </span></div>
             <ul class="nav-links">
@@ -23,73 +24,81 @@
                 <li><a href="contact.html">Contact </a></li>
             </ul>
         </nav>
-    </header>
     
-    <main>
-        <section class="ministries-grid-section py-20">
-            <div class="container">
-                <div class="section-header text-center mb-12">
-                    <h2 class="serif-title">Get Involved</h2>
-                    <p class="section-subtitle mx-auto">
-                        Discover meaningful ways to connect, grow, and serve alongside our church family.
-                    </p>
+    </header>    
+
+    <main class="livestream-page">
+        <div class="container py-24"> <div class="stream-layout-grid">
+                
+                <div class="stream-main-column">
+                    <header class="stream-header mb-8">
+                        <h1 class="serif-title">Live Stream</h1>
+                    </header>
+
+                    <div class="video-section shadow-smooth">
+                        <div class="video-aspect-ratio bg-black">
+                            <iframe src="https://www.youtube.com/embed/live_stream?channel=YOUR_ID" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-footer-prompt">
+                            <p>Prefer Facebook? <a href="#" target="_blank"><i class="fab fa-facebook"></i> Watch Live on Facebook</a></p>
+                        </div>
+                    </div>
+
+                    <div class="sermon-details-card mt-10">
+                        <div class="details-content">
+                            <span class="category-tag">Current Series</span>
+                            <h2 class="sermon-title">Bold Steps of Faith</h2>
+                            <div class="speaker-meta">
+                                <img src="../assets/pastor-avatar.jpg" alt="Pastor" class="avatar-sm">
+                                <span>Pastor James</span>
+                            </div>
+                            <div class="divider"></div>
+                            <p class="sermon-description">
+                                Join us as we explore how to maintain faith and find hope during life's most challenging moments. 
+                                This week, we learn what it means to take bold steps even when the path ahead isn't clear.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="ministry-cards-container">
-                    <div class="ministry-card hover-elevate">
-                        <div class="ministry-icon-circle">
-                            <i class="fas fa-child"></i>
-                        </div>
-                        <h3>Children's Ministry</h3>
-                        <p>Nurturing the next generation through Bible stories, songs, and creative play.</p>
-                    </div>
-
-                    <div class="ministry-card hover-elevate">
-                        <div class="ministry-icon-circle">
-                            <i class="fas fa-music"></i>
-                        </div>
-                        <h3>Worship Arts</h3>
-                        <p>Leading our congregation into God's presence through music, song, and technical arts.</p>
-                    </div>
-
-                    <div class="ministry-card hover-elevate">
-                        <div class="ministry-icon-circle">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Youth Ministry</h3>
-                        <p>Empowering teenagers to live out their faith through fellowship and discipleship.</p>
-                    </div>
-
-                    <div class="ministry-card hover-elevate">
-                        <div class="ministry-icon-circle">
+                <div class="stream-sidebar">
+                    
+                    <div class="glass-card mb-8">
+                        <div class="card-header-icon">
                             <i class="fas fa-hands-helping"></i>
+                            <div>
+                                <h3>Prayer Request</h3>
+                                <p>We are here to pray with you</p>
+                            </div>
                         </div>
-                        <h3>Community Outreach</h3>
-                        <p>Sharing God's love practically by serving those in need within our local community.</p>
+                        <form class="sidebar-form">
+                            <input type="text" placeholder="Name (Optional)" class="modern-input">
+                            <textarea placeholder="Your prayer request..." class="modern-input" rows="4"></textarea>
+                            <button type="submit" class="btn-full">Send Request</button>
+                        </form>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="cta-section py-20 bg-primary">
-            <div class="container cta-content">
-                <h2 class="serif-title white-text">Ready to Take the Next Step?</h2>
-                <p class="cta-subtitle">
-                    Whether you want to join us for worship, serve in ministry, or simply learn more, 
-                    we're here to help you on your journey.
-                </p>
-                <div class="cta-buttons">
-                    <a href="volunteer.html" class="btn-secondary">
-                        <i class="fas fa-heart"></i> Become a Volunteer
-                    </a>
-                    <a href="contact.html" class="btn-outline-white">
-                        Contact Us
-                    </a>
+                    <div class="glass-card">
+                        <div class="card-header-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h3>Service Times</h3>
+                        </div>
+                        <div class="schedule-rows">
+                            <div class="s-row">
+                                <span>Sunday Worship</span>
+                                <strong>9:00 AM & 10:30 AM</strong>
+                            </div>
+                            <div class="s-row">
+                                <span>Wednesday Study</span>
+                                <strong>7:00 PM</strong>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </section>
+        </div>
     </main>
-
 
     <footer class="main-footer">
     

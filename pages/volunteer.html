@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glorious Joy Church </title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo"> GLORIOUS <span> JOY <span> CHURCH </span></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="ministries.html">Ministries</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="contact.html">Contact </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+    
+        <section class="volunteer-hero">
+            <div class="container volunteer-hero-content">
+                <div class="icon-wrapper">
+                    <i class="fas fa-heart"></i>
+                </div>
+                
+                <h1 class="volunteer-title">Volunteer Hub</h1>
+                
+                <p class="volunteer-subtitle">
+                    Discover meaningful ways to use your gifts and talents to serve God and our community.
+                    Every volunteer makes a difference.
+                </p>
+            </div>
+        </section>
+
+        <section class="opportunities-section">
+            <div class="container">
+                <div class="opp-header">
+                    <h2 class="serif-sub-title">Volunteer Opportunities</h2>
+                    <div class="filter-box">
+                        <i class="fas fa-filter"></i>
+                        <select id="ministryFilter">
+                            <option value="all">All Ministries</option>
+                            <option value="worship">Worship Arts</option>
+                            <option value="kids">Children's Ministry</option>
+                            <option value="welcome">Welcome Team</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="opp-grid">
+                    <div class="opp-card hover-elevate">
+                        <div class="card-header-flex">
+                            <div class="icon-circle"><i class="fas fa-music"></i></div>
+                            <div class="card-meta">
+                                <div class="badge-group">
+                                    <span class="badge secondary">Worship</span>
+                                    <span class="badge outline">Weekly</span>
+                                </div>
+                                <h3>Worship Vocalist</h3>
+                                <p class="spots">2 spots available</p>
+                            </div>
+                        </div>
+                        <p class="opp-desc">Lead the congregation in worship through song during our Sunday services.</p>
+                        <div class="opp-details">
+                            <span><i class="fas fa-clock"></i> Sundays, 7:30 AM - 12:00 PM</span>
+                            <span><i class="fas fa-sparkles"></i> Audition required</span>
+                        </div>
+                        <button class="btn-primary w-full open-modal" data-target="vocalist-modal">Sign Up to Volunteer</button>
+                    </div>
+
+                    <div class="opp-card hover-elevate">
+                        <div class="card-header-flex">
+                            <div class="icon-circle"><i class="fas fa-child"></i></div>
+                            <div class="card-meta">
+                                <div class="badge-group">
+                                    <span class="badge secondary">Kids</span>
+                                    <span class="badge outline">Bi-Weekly</span>
+                                </div>
+                                <h3>Sunday School Teacher</h3>
+                                <p class="spots">1 spot available</p>
+                            </div>
+                        </div>
+                        <p class="opp-desc">Help nurture the next generation by teaching Bible stories and activities.</p>
+                        <div class="opp-details">
+                            <span><i class="fas fa-clock"></i> Sundays, 10:00 AM</span>
+                            <span><i class="fas fa-sparkles"></i> Background check required</span>
+                        </div>
+                        <button class="btn-primary w-full open-modal">Sign Up to Volunteer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section py-16">
+            <div class="container">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <h2 class="serif-title">Why Volunteer?</h2>
+                        <p class="section-subtitle">Hear from our volunteers about the impact of serving.</p>
+                    </div>
+
+                    <blockquote class="testimonial-body">
+                        <p class="quote-text">
+                            "Volunteering at Glorious Joy has been one of the most rewarding experiences. 
+                            I've found deep friendships, spiritual growth, and a true sense of purpose."
+                        </p>
+                        
+                        <div class="testimonial-footer">
+                            <div class="footer-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="footer-info">
+                                <h4 class="volunteer-name">Joseph Yusufu</h4>
+                                <p class="volunteer-role">Welcome Team, 3 years</p>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="modal" id="volunteerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Volunteer Sign Up</h3>
+            <form class="space-y-4">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Tell us about your skills..."></textarea>
+                <button type="submit" class="btn-primary w-full">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+
+    <footer class="main-footer">
+    
+        <div class="container footer-grid">
+            
+            <div class="footer-column">
+                <div class="footer-logo-area">
+                    <div class="logo-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <span class="church-name">Glorious Joy Church</span>
+                </div>
+                <p class="footer-description">
+                    A welcoming community of faith, growing together in love and service. 
+                    All are welcome at Glorious Joy Church.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <nav class="footer-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="volunteer.html">Volunteer</a>
+                    <a href="livestream.html">Live Stream</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h3>Service Times</h3>
+                <div class="footer-info-item">
+                    <i class="far fa-clock"></i>
+                    <div>
+                        <p class="info-label">Sunday Worship</p>
+                        <p class="info-detail">10:30 AM to 1:30 PM</p>
+                    </div>
+                </div>
+                <div class="footer-info-item">
+                    <i class="far fa-clock"></i>
+                    <div>
+                        <p class="info-label">Wednesday Fellowship</p>
+                        <p class="info-detail">6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <div class="footer-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p class="info-detail">Next Dash Garden<br>Behind Shell Petrol Station Kimbo, Ruiru</p>
+                </div>
+                <div class="footer-info-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+15551234567" class="info-detail">(+254) 712-345678</a>
+                </div>
+                <div class="footer-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@gloriousjoy.church" class="info-detail">info@gloriousjoy.church</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="year"></span> Glorious Joy Church. Design by @Jose.</p>
+            </div>
+        </div>
+    
+    </footer>
+
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

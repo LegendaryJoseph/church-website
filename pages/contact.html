@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glorious Joy Church </title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo"> GLORIOUS <span> JOY <span> CHURCH </span></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="ministries.html">Ministries</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="contact.html">Contact </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    
+        <section class="contact-header">
+        
+            <div class="container contact-header-content">
+                <h1 class="serif-title">Get in Touch</h1>
+                <p class="section-subtitle">
+                    We'd love to hear from you! Whether you have questions, prayer requests, 
+                    or just want to say hello, our team is here to help.
+                </p>
+            </div>
+        
+        </section>
+
+        <section class="contact-body">
+
+            <div class="container contact-grid">
+                
+                <div class="contact-form-container">
+                    <h2 class="serif-sub-title">Send Us a Message</h2>
+                    <form id="churchContactForm" class="space-y-4">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" required placeholder="Full Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" required placeholder="email@example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" required>
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="visit">Planning a Visit</option>
+                                <option value="prayer">Prayer Request</option>
+                                <option value="volunteer">Volunteer Information</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" rows="6" required placeholder="How can we help you?"></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info-column">
+                    <div class="info-card">
+                        <h3>Church Information</h3>
+                        <p class="card-desc">Come visit us or reach out anytime</p>
+                        
+                        <div class="contact-item">
+                            <div class="icon-circle-small"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Behind Total Petrol Station Kimbo, Ruiru</p>
+                                <a href="https://maps.app.goo.gl/knF4JhKf3rfS4yEh8" target="_blank" class="text-link">Get Directions <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon-circle-small"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>(+254) 712-345678</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon-circle-small"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4>Office Hours</h4>
+                                <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card p-0 overflow-hidden">
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.026919025326!2d36.967949474965444!3d-1.1412127988478553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4743e427c367%3A0x70fef215d379a0d3!2sGlorious%20Joy%20Church!5e0!3m2!1sen!2ske!4v1767320648066!5m2!1sen!2ske" 
+                                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">" 
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="main-footer">
+    
+        <div class="container footer-grid">
+            
+            <div class="footer-column">
+                <div class="footer-logo-area">
+                    <div class="logo-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <span class="church-name">Glorious Joy Church</span>
+                </div>
+                <p class="footer-description">
+                    A welcoming community of faith, growing together in love and service. 
+                    All are welcome at Glorious Joy Church.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <nav class="footer-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="volunteer.html">Volunteer</a>
+                    <a href="livestream.html">Live Stream</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h3>Service Times</h3>
+                <div class="footer-info-item">
+                    <i class="far fa-clock"></i>
+                    <div>
+                        <p class="info-label">Sunday Worship</p>
+                        <p class="info-detail">10:30 AM to 1:30 PM</p>
+                    </div>
+                </div>
+                <div class="footer-info-item">
+                    <i class="far fa-clock"></i>
+                    <div>
+                        <p class="info-label">Wednesday Fellowship</p>
+                        <p class="info-detail">6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <div class="footer-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p class="info-detail">Next Dash Garden<br>Behind Shell Petrol Station Kimbo, Ruiru</p>
+                </div>
+                <div class="footer-info-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+254712345678" class="info-detail">(+254) 712-345678</a>
+                </div>
+                <div class="footer-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@gloriousjoy.church" class="info-detail">info@gloriousjoy.church</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="year"></span> Glorious Joy Church. Design by @Jose.</p>
+            </div>
+        </div>
+    
+    </footer>
+
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
