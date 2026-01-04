@@ -1485,3 +1485,169 @@ textarea.form-input {
     padding-top: 0;      /* Removes any extra padding */
     padding-bottom: 0;   /* Removes any extra padding */
 }
+
+.error-page {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 70vh; /* Ensures the footer is pushed down */
+    display: flex;
+    align-items: center;
+}
+
+.error-icon {
+    font-size: 5rem;
+    color: var(--primary-color);
+    opacity: 0.5;
+}
+
+.error-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.suggestion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.suggestion-grid a {
+    padding: 15px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+    background: var(--card-bg);
+    transition: transform 0.2s ease;
+}
+
+.suggestion-grid a:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary-color);
+}
+
+.small-caps {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    opacity: 0.6;
+}
+
+.stream-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/church-interior.jpg');
+    background-size: cover;
+}
+
+.placeholder-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: white !important;
+}
+
+.platform-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-yt, .btn-fb {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s;
+}
+
+.btn-yt { background-color: #FF0000; }
+.btn-fb { background-color: #1877F2; }
+
+.btn-yt:hover, .btn-fb:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+.pulse-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    70% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.7; }
+}
+
+.speaker-meta {
+    display: flex;
+    flex-direction: column; /* Stacks the image and name vertically */
+    align-items: center;    /* Centers them horizontally */
+    gap: 10px;              /* Adds a small space between image and name */
+    margin-top: 15px;
+}
+
+.avatar-sm {
+    width: 64px;            /* Adjust size as needed */
+    height: 64px;
+    border-radius: 50%;     /* Makes the image circular */
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.speaker-meta span {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Center and scale the sermon header */
+.details-content {
+    text-align: center; /* Centers the Category, Title, and Speaker */
+}
+
+.sermon-title {
+    font-size: 1.8rem; /* Reduced from 2.2rem to be less "big" */
+    margin: 10px 0;    /* Tightens vertical space */
+    color: var(--text-color);
+}
+
+/* Fix the gap below the name */
+.speaker-meta {
+    margin-bottom: 5px; /* Pulls the name closer to the divider */
+}
+
+.divider {
+    height: 1px;
+    background: var(--card-border);
+    margin: 10px auto 20px; /* Reduced top margin from 25px to 10px */
+    width: 80%;             /* Optional: makes the line shorter for a classier look */
+}
+
+/* Ensure description is centered or left-aligned as per preference */
+.sermon-description {
+    text-align: left; /* Keep the long text left-aligned for readability */
+    line-height: 1.6;
+    margin-top: 0;
+}

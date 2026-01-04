@@ -175,3 +175,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// Add to your error page or main.js
+if (window.location.pathname.includes('error.html')) {
+    setTimeout(() => {
+        window.location.href = '../index.html';
+    }, 10000); // 10 seconds
+}
